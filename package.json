@@ -9,21 +9,21 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx sequelize db:migrate && npx sequelize db:seed:all && node server.js",
-    "dev": "nodemon server.js",      
+    "start": "npx sequelize db:migrate && npx sequelize db:seed:all && node app.js",
+    "dev": "nodemon app.js",
     "migrate": "node_modules/sequelize-cli/bin/sequelize db:migrate --migrations-path /migrations",
     "seed": "node_modules/sequelize-cli/bin/sequelize db:seed:all --seeders-path /seeders"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.1",
+    "compression": "^1.7.4",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
-    "express-async-handler": "^1.2.0",
     "mysql2": "^2.3.3",
+    "node-cache": "^5.1.2",
     "sequelize": "^6.16.1",
     "sequelize-cli": "^6.4.1"
   },
